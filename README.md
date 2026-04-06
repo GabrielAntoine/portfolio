@@ -11,7 +11,7 @@ This repository holds the source code of my personal website, <https://gabrielan
 
 ### Prerequisites
 
-- Node.js ≥ `22.12.0`
+- Node.js ≥ `24.14.1`
 
 ### Install
 
