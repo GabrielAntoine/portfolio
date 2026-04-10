@@ -4,17 +4,26 @@ import { ComponentProps } from 'react'
 import { Button } from '../ui/button'
 import { useTheme } from 'next-themes'
 import { Moon, Sun } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import { useIsClient } from 'usehooks-ts'
 
 type Props = ComponentProps<typeof Button>
 
-export function ThemeToggleButton(props: Props) {
+export function ToggleThemeButton(props: Props) {
   const { setTheme, resolvedTheme } = useTheme()
+  const t = useTranslations('ToggleThemeButton')
+  const isClient = useIsClient()
 
   return (
     <Button
       variant={'ghost'}
       size={'icon-lg'}
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+      aria-label={
+        isClient && resolvedTheme === 'dark'
+          ? t('to-light-label')
+          : t('to-dark-label')
+      }
       {...props}
     >
       <Sun className='size-6 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90' />

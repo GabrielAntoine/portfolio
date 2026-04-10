@@ -6,20 +6,32 @@
     }
   },
   "Hero": {
+    "description": "<strong>Bonjour !</strong> 👋 Je suis un développeur belge <belgium></belgium> de {age} ans situé à <location>Liège</location>. Je construis des applications web rapides, accessibles et scalables, avec un fort accent sur les principes de clean code, tout en explorant aussi d'autres types de projets !",
     "updated-at": "Dernière mise à jour : {updatedAt, date, long}",
+    "github-label": "Voir mon profil GitHub",
     "github-hint": "Découvrez mes projets !",
+    "linkedin-label": "Voir mon profil LinkedIn",
     "linkedin-hint": "Entrons en contact !",
+    "mail-label": "M'envoyer un email",
     "mail-hint": "Écrivez-moi !",
+    "cv-label": "Télécharger mon CV",
     "cv-hint": "Téléchargez mon CV !",
     "logo-link": "https://fr.wikipedia.org/wiki/Limulidae",
+    "logo-label": "Visiter la page secrète du logo",
+    "scroll-down-button-label": "Défiler vers le contenu du site",
     "typewriter": {
       "length": "6",
       "1": "Développeur Full Stack",
       "2": "Passionné du bas niveau",
       "3": "Alimenté par la curiosité",
-      "4": "Fan de TypeScript & C++",
-      "5": "Adore réinventer la roue",
-      "6": "!Aime vraiment le CSS"
+      "4": "Attaché à l'expérience dev",
+      "5": "Fan de TypeScript & C++",
+      "6": "Adore réinventer la roue",
+      "7": "!Aime vraiment le CSS"
     }
+  },
+  "ToggleThemeButton": {
+    "to-dark-label": "Activer le mode sombre",
+    "to-light-label": "Activer le mode clair"
   }
 }

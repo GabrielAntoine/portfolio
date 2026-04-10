@@ -1,10 +1,11 @@
 import { Metadata } from 'next'
 import { PropsWithChildren } from 'react'
+import { env } from './env'
 
 const siteName = 'Gabriel Antoine'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.BASE_URL!),
+  metadataBase: env.BASE_URL,
   title: {
     template: `%s — ${siteName}`,
     default: siteName,

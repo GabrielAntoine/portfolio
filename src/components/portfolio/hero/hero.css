@@ -1,0 +1,14 @@
+@keyframes wave {
+  0% {
+    color: inherit;
+  }
+
+  5%,
+  10% {
+    color: var(--wave-color);
+  }
+  12%,
+  100% {
+    color: inherit;
+  }
+}

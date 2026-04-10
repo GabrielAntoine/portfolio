@@ -64,7 +64,7 @@ export default async function LocaleLayout({
 
   return (
     <html
-      // lang={locale}
+      lang={locale}
       suppressHydrationWarning
       className={`h-full overflow-x-hidden antialiased ${inter.variable} ${jetbrainsMono.variable}`}
     >

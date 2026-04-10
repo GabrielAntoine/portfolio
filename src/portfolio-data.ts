@@ -4,4 +4,5 @@ export const portfolioData = {
   githubUsername: 'GabrielAntoine',
   githubUrl: 'https://github.com/GabrielAntoine',
   email: 'pro.gabriel.antoine@gmail.com',
+  birthDate: new Date('2004-05-23'),
 }

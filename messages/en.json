@@ -6,20 +6,32 @@
     }
   },
   "Hero": {
+    "description": "<strong>Hi!</strong> 👋 I'm a {age}-year-old Belgian <belgium></belgium> developer based in <location>Liège</location>. I build fast, accessible and scalable web applications, with a strong focus on clean code principles, while also exploring other kinds of projects!",
     "updated-at": "Last update : {updatedAt, date, long}",
+    "github-label": "See my GitHub profile",
     "github-hint": "See my projects!",
+    "linkedin-label": "See my LinkedIn profile",
     "linkedin-hint": "Let's connect!",
+    "mail-label": "Send me an email",
     "mail-hint": "Contact me!",
+    "cv-label": "Download my CV",
     "cv-hint": "Grab my CV!",
     "logo-link": "https://en.wikipedia.org/wiki/Horseshoe_crab",
+    "logo-label": "Visit the logo's secret page",
+    "scroll-down-button-label": "Scroll down to the site content",
     "typewriter": {
-      "length": "6",
+      "length": "7",
       "1": "Full Stack Developer",
       "2": "Low-level Enthusiast",
       "3": "Driven by curiosity",
-      "4": "TypeScript & C++ lover",
-      "5": "Loves reinventing the wheel",
-      "6": "!Actually enjoys CSS"
+      "4": "DX obsessed",
+      "5": "TypeScript & C++ lover",
+      "6": "Loves reinventing the wheel",
+      "7": "!Actually enjoys CSS"
     }
+  },
+  "ToggleThemeButton": {
+    "to-dark-label": "Switch to dark mode",
+    "to-light-label": "Switch to light mode"
   }
 }

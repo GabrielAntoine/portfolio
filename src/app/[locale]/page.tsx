@@ -1,4 +1,4 @@
-import { Hero } from '@/components/portfolio/hero'
+import { Hero } from '@/components/portfolio/hero/hero'
 import { getPathname } from '@/i18n/navigation'
 import { Metadata, ResolvingMetadata } from 'next'
 import { getTranslations } from 'next-intl/server'
