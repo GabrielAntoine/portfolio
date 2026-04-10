@@ -4,5 +4,22 @@
     "/": {
       "title": "Portfolio"
     }
+  },
+  "Hero": {
+    "updated-at": "Last update : {updatedAt, date, long}",
+    "github-hint": "See my projects!",
+    "linkedin-hint": "Let's connect!",
+    "mail-hint": "Contact me!",
+    "cv-hint": "Grab my CV!",
+    "logo-link": "https://en.wikipedia.org/wiki/Horseshoe_crab",
+    "typewriter": {
+      "length": "6",
+      "1": "Full Stack Developer",
+      "2": "Low-level Enthusiast",
+      "3": "Driven by curiosity",
+      "4": "TypeScript & C++ lover",
+      "5": "Loves reinventing the wheel",
+      "6": "!Actually enjoys CSS"
+    }
   }
 }

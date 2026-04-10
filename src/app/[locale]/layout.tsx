@@ -6,6 +6,7 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { TooltipProvider } from '@/components/ui/tooltip'
 
 const inter = Inter({
   variable: '--font-sans',
@@ -63,18 +64,21 @@ export default async function LocaleLayout({
 
   return (
     <html
-      lang={locale}
+      // lang={locale}
       suppressHydrationWarning
-      className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`h-full overflow-x-hidden antialiased ${inter.variable} ${jetbrainsMono.variable}`}
     >
-      <body className='flex min-h-full flex-col'>
+      <body className='h-full overflow-x-hidden'>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
           enableSystem
           disableTransitionOnChange
+          forcedTheme={undefined}
         >
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <TooltipProvider>
+            <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

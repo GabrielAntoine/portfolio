@@ -4,5 +4,22 @@
     "/": {
       "title": "Portfolio"
     }
+  },
+  "Hero": {
+    "updated-at": "Dernière mise à jour : {updatedAt, date, long}",
+    "github-hint": "Découvrez mes projets !",
+    "linkedin-hint": "Entrons en contact !",
+    "mail-hint": "Écrivez-moi !",
+    "cv-hint": "Téléchargez mon CV !",
+    "logo-link": "https://fr.wikipedia.org/wiki/Limulidae",
+    "typewriter": {
+      "length": "6",
+      "1": "Développeur Full Stack",
+      "2": "Passionné du bas niveau",
+      "3": "Alimenté par la curiosité",
+      "4": "Fan de TypeScript & C++",
+      "5": "Adore réinventer la roue",
+      "6": "!Aime vraiment le CSS"
+    }
   }
 }
