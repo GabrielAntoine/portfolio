@@ -1,7 +1,9 @@
-import { Hero } from '@/components/portfolio/hero/hero'
+import { Hero } from '@/components/portfolio/hero'
+import { Projects } from '@/components/portfolio/projects'
 import { getPathname } from '@/i18n/navigation'
 import { Metadata, ResolvingMetadata } from 'next'
 import { getTranslations } from 'next-intl/server'
+import { ComponentProps } from 'react'
 
 export async function generateMetadata(
   { params }: PageProps<'/[locale]'>,
@@ -32,31 +34,40 @@ export async function generateMetadata(
 }
 
 export default async function Home() {
+  const t = await getTranslations('Pages./')
+
   return (
     <div>
-      <Hero />
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-      consequatur, quo perspiciatis saepe ipsam modi unde nesciunt sunt dicta
-      quia molestias, iste minus asperiores nobis? Necessitatibus cum tenetur
-      ducimus ex soluta adipisci at? Ea culpa rerum, vel ratione repellendus
-      voluptatum illum magni, explicabo veniam, temporibus quaerat et numquam?
-      Eum sint ducimus beatae similique! Perspiciatis magnam itaque a voluptatum
-      quia dolorum omnis accusamus illum porro quod numquam ducimus ipsa,
-      excepturi perferendis ab autem! Ipsum perferendis voluptatem, libero amet
-      assumenda quis dolorum error eligendi. Pariatur accusamus obcaecati
-      asperiores maxime a aperiam fugiat est, illum voluptates vitae
-      necessitatibus odit accusantium autem delectus perspiciatis iusto? Sed
-      quas corrupti libero quam praesentium ipsum cum, ipsa nihil odio! Dolore,
-      laudantium repellendus quibusdam aliquid iure animi numquam et id repellat
-      quas voluptatum delectus veritatis veniam porro ipsa. Veritatis debitis
-      maiores ipsum aut nihil, amet velit ut ipsa labore aliquid dolorem
-      deserunt officiis hic laudantium alias ullam! Quos repudiandae dolorum
-      neque rerum praesentium, error corrupti, quod officia minima culpa
-      mollitia distinctio est placeat quidem sint voluptatum nulla, ea iure
-      tempora perspiciatis quisquam asperiores voluptate laudantium
-      consequuntur. Provident recusandae dolore nostrum dolorem temporibus
-      dolorum quis? Ipsam ipsum libero optio atque at provident dignissimos
-      enim? Nulla voluptatibus dignissimos neque rem?
+      <main className='flex flex-col items-center'>
+        <Hero />
+        <div
+          id='content'
+          className='flex w-full max-w-7xl flex-col gap-16 px-8 *:first:mt-16'
+        >
+          <Section title={t('sections.projects')}>
+            <Projects />
+          </Section>
+          <Section title={t('sections.experience')} />
+          <Section title={t('sections.education')} />
+          <Section title={t('sections.contact')} />
+        </div>
+      </main>
     </div>
+  )
+}
+
+function Section({
+  title,
+  children,
+  ...props
+}: ComponentProps<'section'> & { title: string }) {
+  return (
+    <section {...props}>
+      <div className='mb-8 w-fit'>
+        <h2 className='font-semibol mb-2 w-fit text-4xl'>{title}</h2>
+        <div className='from-brand-primary to-brand-secondary h-1 w-auto rounded-full bg-linear-to-r' />
+      </div>
+      {children}
+    </section>
   )
 }

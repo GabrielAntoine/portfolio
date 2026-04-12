@@ -8,8 +8,10 @@ export function HeroTitle() {
   const [firstName] = names
 
   return (
-    <h1 className='max-w-full text-center text-[clamp(var(--text-5xl),5vw,var(--text-7xl))] leading-[1em] font-bold'>
-      <span className='sr-only'>{fullname}</span>
+    <h1
+      aria-label={fullname}
+      className='max-w-full text-center text-[clamp(var(--text-5xl),5vw,var(--text-7xl))] leading-[1em] font-bold'
+    >
       <span aria-hidden className='flex gap-[0.2em]'>
         {names.map((name, i) => (
           <span

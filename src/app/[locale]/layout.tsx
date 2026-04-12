@@ -66,9 +66,9 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`h-full overflow-x-hidden antialiased ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`selection:bg-brand-primary/60 h-full overflow-x-hidden scroll-smooth antialiased ${inter.variable} ${jetbrainsMono.variable}`}
     >
-      <body className='h-full overflow-x-hidden'>
+      <body className='h-full overflow-x-hidden scroll-smooth'>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'

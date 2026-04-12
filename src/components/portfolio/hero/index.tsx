@@ -14,6 +14,7 @@ import { TbBrandLinkedin } from 'react-icons/tb'
 import { IconBelgium } from 'nucleo-flags'
 import { HeroTitle } from './hero-title'
 import { differenceInYears } from 'date-fns'
+import ScrollDownButton from '@/components/scroll-down-button'
 
 export async function Hero() {
   const t = await getTranslations('Hero')
@@ -44,7 +45,7 @@ export async function Hero() {
   ]
 
   return (
-    <div className='relative z-0 grid min-h-svh w-full grid-rows-[1fr_auto_1fr] place-items-center justify-center px-4'>
+    <div className='relative grid min-h-svh w-full grid-rows-[1fr_auto_1fr] place-items-center justify-center px-4'>
       <HeroBackground />
       <ToggleThemeButton className='absolute top-2 right-2' />
       <Link
@@ -126,8 +127,11 @@ export async function Hero() {
         size={'icon-xl'}
         className='mb-4 animate-bounce self-end rounded-full'
         aria-label={t('scroll-down-button-label')}
+        asChild
       >
-        <ArrowDown className='size-6' />
+        <ScrollDownButton fragment='content'>
+          <ArrowDown className='size-6' />
+        </ScrollDownButton>
       </Button>
     </div>
   )

@@ -1,0 +1,27 @@
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin-angle {
+  to {
+    --angle: 360deg;
+  }
+}
+/*
+--border-radius: 30px;
+--border-width: 5px;
+--halo-outer-spread: 1px;
+--halo-inner-spread: 1px;
+--halo-blur: 10px;
+--halo-opacity: 0.85; */
+
+@utility gb-rounded-* {
+  --gb-rounded: --value(--radius-*, [length]);
+}
+
+@utility gb-width-* {
+  --gb-width: --spacing(--value(integer));
+  --gb-width: --value([length]);
+}

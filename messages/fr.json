@@ -5,6 +5,16 @@
       "title": "Portfolio"
     }
   },
+  "Pages": {
+    "/": {
+      "sections": {
+        "projects": "Projets",
+        "experience": "Expérience",
+        "education": "Études",
+        "contact": "Contact"
+      }
+    }
+  },
   "Hero": {
     "description": "<strong>Bonjour !</strong> 👋 Je suis un développeur belge <belgium></belgium> de {age} ans situé à <location>Liège</location>. Je construis des applications web rapides, accessibles et scalables, avec un fort accent sur les principes de clean code, tout en explorant aussi d'autres types de projets !",
     "updated-at": "Dernière mise à jour : {updatedAt, date, long}",
@@ -29,6 +39,10 @@
       "6": "Adore réinventer la roue",
       "7": "!Aime vraiment le CSS"
     }
+  },
+  "Project": {
+    "repository": "Voir le dépôt",
+    "visit": "Visiter"
   },
   "ToggleThemeButton": {
     "to-dark-label": "Activer le mode sombre",

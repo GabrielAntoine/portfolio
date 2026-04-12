@@ -5,6 +5,16 @@
       "title": "Portfolio"
     }
   },
+  "Pages": {
+    "/": {
+      "sections": {
+        "projects": "Projects",
+        "experience": "Work experience",
+        "education": "Education",
+        "contact": "Contact"
+      }
+    }
+  },
   "Hero": {
     "description": "<strong>Hi!</strong> 👋 I'm a {age}-year-old Belgian <belgium></belgium> developer based in <location>Liège</location>. I build fast, accessible and scalable web applications, with a strong focus on clean code principles, while also exploring other kinds of projects!",
     "updated-at": "Last update : {updatedAt, date, long}",
@@ -29,6 +39,10 @@
       "6": "Loves reinventing the wheel",
       "7": "!Actually enjoys CSS"
     }
+  },
+  "Project": {
+    "repository": "See the repository",
+    "visit": "Visit"
   },
   "ToggleThemeButton": {
     "to-dark-label": "Switch to dark mode",
