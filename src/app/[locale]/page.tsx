@@ -1,3 +1,4 @@
+import { Footer } from '@/components/portfolio/footer'
 import { Hero } from '@/components/portfolio/hero'
 import { Projects } from '@/components/portfolio/projects'
 import { getPathname } from '@/i18n/navigation'
@@ -52,6 +53,7 @@ export default async function Home() {
           <Section title={t('sections.contact')} />
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

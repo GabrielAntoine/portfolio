@@ -15,17 +15,12 @@
       }
     }
   },
+  "Footer": {
+    "languages": "Langues"
+  },
   "Hero": {
     "description": "<strong>Bonjour !</strong> 👋 Je suis un développeur belge <belgium></belgium> de {age} ans situé à <location>Liège</location>. Je construis des applications web rapides, accessibles et scalables, avec un fort accent sur les principes de clean code, tout en explorant aussi d'autres types de projets !",
     "updated-at": "Dernière mise à jour : {updatedAt, date, long}",
-    "github-label": "Voir mon profil GitHub",
-    "github-hint": "Découvrez mes projets !",
-    "linkedin-label": "Voir mon profil LinkedIn",
-    "linkedin-hint": "Entrons en contact !",
-    "mail-label": "M'envoyer un email",
-    "mail-hint": "Écrivez-moi !",
-    "cv-label": "Télécharger mon CV",
-    "cv-hint": "Téléchargez mon CV !",
     "logo-link": "https://fr.wikipedia.org/wiki/Limulidae",
     "logo-label": "Visiter la page secrète du logo",
     "scroll-down-button-label": "Défiler vers le contenu du site",
@@ -43,6 +38,16 @@
   "Project": {
     "repository": "Voir le dépôt",
     "visit": "Visiter"
+  },
+  "SocialLinks": {
+    "github-label": "Voir mon profil GitHub",
+    "github-hint": "Découvrez mes projets !",
+    "linkedin-label": "Voir mon profil LinkedIn",
+    "linkedin-hint": "Entrons en contact !",
+    "mail-label": "M'envoyer un email",
+    "mail-hint": "Écrivez-moi !",
+    "cv-label": "Télécharger mon CV",
+    "cv-hint": "Téléchargez mon CV !"
   },
   "ToggleThemeButton": {
     "to-dark-label": "Activer le mode sombre",

@@ -1,48 +1,23 @@
 import { Button } from '../../ui/button'
-import { ArrowDown, BadgeCheck, FileText, Mail } from 'lucide-react'
+import { ArrowDown, BadgeCheck } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
 import { portfolioData } from '@/portfolio-data'
 import { getTranslations } from 'next-intl/server'
-import { Tooltip, TooltipContent, TooltipTrigger } from '../../ui/tooltip'
 import { Badge } from '../../ui/badge'
 import { ToggleThemeButton } from '../toggle-theme-button'
 import { Logo } from '../../logo'
 import { Typewriter } from '../../typewriter'
 import { HeroBackground } from './hero-background'
-import { LuGithub } from 'react-icons/lu'
-import { TbBrandLinkedin } from 'react-icons/tb'
 import { IconBelgium } from 'nucleo-flags'
 import { HeroTitle } from './hero-title'
 import { differenceInYears } from 'date-fns'
 import ScrollDownButton from '@/components/scroll-down-button'
+import { SocialLinks } from '../social-links'
 
 export async function Hero() {
   const t = await getTranslations('Hero')
 
   const animateIn = `animate-in fade-in slide-in-from-bottom-16 duration-700 ease-out will-change-transform`
-
-  const iconLinks = [
-    {
-      name: 'linkedin', // allow to get the hint [name]-hint, and label [name]-label
-      url: portfolioData.linkedinUrl,
-      icon: <TbBrandLinkedin className='size-9' />,
-    },
-    {
-      name: 'github',
-      url: portfolioData.githubUrl,
-      icon: <LuGithub className='size-8' />,
-    },
-    {
-      name: 'mail',
-      url: `mailto:${portfolioData.email}`,
-      icon: <Mail className='size-9' />,
-    },
-    {
-      name: 'cv',
-      url: '/cv.pdf',
-      icon: <FileText className='size-7.5' />,
-    },
-  ]
 
   return (
     <div className='relative grid min-h-svh w-full grid-rows-[1fr_auto_1fr] place-items-center justify-center px-4'>
@@ -102,25 +77,7 @@ export async function Hero() {
           {t('updated-at', { updatedAt: new Date() })}
         </Badge>
         <div className='flex items-center gap-2'>
-          {iconLinks.map((link) => (
-            <Tooltip key={link.name}>
-              <TooltipTrigger asChild>
-                <Button size={'icon-xl'} variant={'ghost'} asChild>
-                  <span>
-                    <Link
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      aria-label={t(`${link.name}-label`)}
-                      href={link.url}
-                    >
-                      {link.icon}
-                    </Link>
-                  </span>
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>{t(`${link.name}-hint`)}</TooltipContent>
-            </Tooltip>
-          ))}
+          <SocialLinks />
         </div>
       </div>
       <Button
