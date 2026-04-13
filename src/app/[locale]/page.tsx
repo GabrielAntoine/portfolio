@@ -1,9 +1,10 @@
 import { Footer } from '@/components/portfolio/footer'
 import { Hero } from '@/components/portfolio/hero'
+import { MustSeeRibbon } from '@/components/portfolio/must-see-ribbon'
 import { Projects } from '@/components/portfolio/projects'
 import { getPathname } from '@/i18n/navigation'
 import { Metadata, ResolvingMetadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ComponentProps } from 'react'
 
 export async function generateMetadata(
@@ -34,7 +35,11 @@ export async function generateMetadata(
   }
 }
 
-export default async function Home() {
+export default async function Home({ params }: PageProps<'/[locale]'>) {
+  const { locale } = await params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations('Pages./')
 
   return (

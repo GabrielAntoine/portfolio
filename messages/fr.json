@@ -35,6 +35,9 @@
       "7": "!Aime vraiment le CSS"
     }
   },
+  "MustSeeRibbon": {
+    "must-see": "À voir !"
+  },
   "Project": {
     "repository": "Voir le dépôt",
     "visit": "Visiter"
@@ -52,5 +55,57 @@
   "ToggleThemeButton": {
     "to-dark-label": "Activer le mode sombre",
     "to-light-label": "Activer le mode clair"
+  },
+  "data": {
+    "projects": {
+      "tags": {
+        "library": "Bibliothèque",
+        "game": "Jeu",
+        "mobile": "Mobile",
+        "school": "École",
+        "hobby": "Hobby",
+        "internship": "Stage",
+        "socialnetwork": "Réseau social",
+        "arcade": "Arcade",
+        "tourguide": "Guide touristique",
+        "cartography": "Cartographie",
+        "security": "Sécurité",
+        "productivity": "Productivité",
+        "mathematics": "Mathématiques",
+        "restapi": "API REST",
+        "compiletimepolymorphism": "Polymorphisme à la compilation",
+        "hybridstockage": "Stockage hybride"
+      },
+      "twoutter": {
+        "name": "Twoutter",
+        "description": "Une application web full stack implémentant les fonctionnalités principales de Twitter avec des technologies modernes et une interface responsive et mobile-first",
+        "thumbnailAlt": "Un aperçu du côté responsive de Twoutter en montrant les versions ordinateur et mobile"
+      },
+      "mario-luigi": {
+        "name": "Jeu Mario & Luigi",
+        "description": "Une reproduction d'un mini-jeu de Mario & Luigi : Voyage au centre de Bowser sorti sur Nintendo DS en 2009, en utilisant uniquement du JavaScript vanilla et l'API Canvas 2D native du navigateur",
+        "thumbnailAlt": "Un aperçu du jeu Mario & Luigi montrant des carapaces tomber sur la gauche de l'image et Mario et Luigi en grand sur la droite"
+      },
+      "sitytrip": {
+        "name": "SityTrip",
+        "description": "Une application web cartographique, développée en collaboration avec Geolives Belgium SRL, servant de guide touristique pour les city trips, et réalisée dans le cadre de mon travail de fin d'études à la HEPL",
+        "thumbnailAlt": "Un aperçu de divers points d'intérêt dessinés sur la carte du site SityTrip"
+      },
+      "crypto-cpp": {
+        "name": "Cryptographie en C++",
+        "description": "Une bibliothèque C++ utilisant CMake et contenant mon implémentation d'algorithmes cryptographiques connus tels que AES/GCM, en utilisant des fonctionnalités avancées du C++ telles que les \"concepts\" de C++ 20",
+        "thumbnailAlt": "Un aperçu du code de la bibliothèque cryptographique montrant un morceau de l'implémentation de l'algorithme AES"
+      },
+      "green-house": {
+        "name": "Green House",
+        "description": "Une reproduction du jeu Nintendo Green House sorti sur Game & Watch en 1982, réalisé en C POSIX dans le cadre d'un cours d'introduction aux threads",
+        "thumbnailAlt": "Un aperçu du jeu Green House montrant le personnage, Stanley, tuant un insecte avec de l'insecticide"
+      },
+      "sleep-app": {
+        "name": "Application pour dormir",
+        "description": "Une application mobile pour aider les utilisateurs à mieux respecter leurs horaires de sommeil avec des mécanismes de gamification, réalisée avec Flutter et Firebase",
+        "thumbnailAlt": "Un aperçu de l'application mobile pour dormir montrant les trois écrans principaux. De gauche à droite : l'écran pour configurer ses horaires de sommeil, l'écran pour aller dormir et l'écran du profil et des statistiques"
+      }
+    }
   }
 }

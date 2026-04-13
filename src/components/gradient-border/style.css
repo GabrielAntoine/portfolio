@@ -1,10 +1,11 @@
 @property --angle {
   syntax: '<angle>';
-  initial-value: 0deg;
+  initial-value: 45deg;
   inherits: false;
 }
 
-@keyframes spin-angle {
+/* TODO: Opimize or delete */
+@keyframes spin-angle-del {
   to {
     --angle: 360deg;
   }

@@ -35,6 +35,9 @@
       "7": "!Actually enjoys CSS"
     }
   },
+  "MustSeeRibbon": {
+    "must-see": "Must see!"
+  },
   "Project": {
     "repository": "See the repository",
     "visit": "Visit"
@@ -52,5 +55,57 @@
   "ToggleThemeButton": {
     "to-dark-label": "Switch to dark mode",
     "to-light-label": "Switch to light mode"
+  },
+  "data": {
+    "projects": {
+      "tags": {
+        "library": "Library",
+        "game": "Game",
+        "mobile": "Mobile",
+        "school": "School",
+        "hobby": "Hobby",
+        "internship": "Internship",
+        "socialnetwork": "Social network",
+        "arcade": "Arcade",
+        "tourguide": "Tour guide",
+        "cartography": "Cartography",
+        "security": "Security",
+        "productivity": "Productivity",
+        "mathematics": "Mathematics",
+        "restapi": "REST API",
+        "compiletimepolymorphism": "Compile-time polymorphism",
+        "hybridstockage": "Hybrid stockage"
+      },
+      "twoutter": {
+        "name": "Twoutter",
+        "description": "A full stack web application recreating core Twitter features using modern web technologies and a mobile-first responsive UI",
+        "thumbnailAlt": "A preview of Twoutter's responsiveness by showing the dekstop and mobile versions side by side"
+      },
+      "mario-luigi": {
+        "name": "Mario & Luigi Game",
+        "description": "A recreation of a mini-game from Mario & Luigi: Bowser's Inside Story released on Nintendo DS in 2009, using only vanilla JavaScript and the native Canvas 2D API",
+        "thumbnailAlt": "A preview of The Mario & Luigi game showing shells falling on the left-hand side and Mario and Luigi in big on the right-hand side"
+      },
+      "sitytrip": {
+        "name": "SityTrip",
+        "description": "A cartographic web application, developed in collaboration with Geolives Belgium SRL, serving as a tour guide for city-trips, as part of my final-year project at HEPL",
+        "thumbnailAlt": "A preview of several points of interest drawn on the map of the SityTrip website."
+      },
+      "crypto-cpp": {
+        "name": "Cryptography in C++",
+        "description": "A C++ and CMake library featuring implementations of well-known cryptographic algorithms such as AES/GCM, by using advanced C++ features such as C++20 \"concepts\"",
+        "thumbnailAlt": "A preview of the cryptographic library's code showing part of the AES implementation"
+      },
+      "green-house": {
+        "name": "Green House",
+        "description": "A recreation of the Nintendo Game & Watch title Green House (1982), built in C (POSIX) as part of an introductory course on multithreading",
+        "thumbnailAlt": "A preview of the Green House game showing the character, Stanley, killing a bug with an insecticide."
+      },
+      "sleep-app": {
+        "name": "Sleep application",
+        "description": "A mobile application to help users maintain consistent sleep schedules with gamification features, made with Flutter and Firebase",
+        "thumbnailAlt": "A preview of the mobile application to improve sleep habits showing the three main screens. From left to right: The screen to set their sleep schedule, the screen to go to sleep and the profile and statistics screen."
+      }
+    }
   }
 }

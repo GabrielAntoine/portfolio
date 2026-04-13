@@ -1,19 +1,41 @@
 import { portfolioData } from '@/portfolio-data'
 import { Project } from './project'
+import { getTranslations } from 'next-intl/server'
+import { tags } from './project-tags'
+import { MustSeeRibbon } from './must-see-ribbon'
 
-export function Projects() {
+export async function Projects() {
+  const t = await getTranslations('data.projects')
+
   return (
     <div className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3'>
-      {portfolioData.projects.map((project, i) => (
-        <div key={project.name} className='mx-auto h-full w-full'>
-          <Project
-            tags={project.tags}
-            title={project.name}
-            description={project.description}
-            image={project.image}
-          />
-        </div>
-      ))}
+      {portfolioData.projects.map((project) => {
+        const g = (id: string) => t(`${project.id}.${id}`)
+        return (
+          <div key={project.id} className='relative mx-auto h-full w-full'>
+            {project.mustSee && <MustSeeRibbon />}
+
+            <Project
+              tags={project.tags.map((tagId) => {
+                const tag = tags[tagId]
+
+                return {
+                  icon: tag.icon,
+                  label: tag.localized ? t(`tags.${tagId}`) : tag.label,
+                }
+              })}
+              website={project.websiteUrl}
+              repository={project.githubRepositoryUrl}
+              title={g('name')}
+              description={g('description')}
+              thumbnail={{
+                src: project.image,
+                alt: g('thumbnailAlt'),
+              }}
+            />
+          </div>
+        )
+      })}
     </div>
   )
 }
