@@ -1,6 +1,7 @@
+import { Education } from '@/components/portfolio/education'
+import { WorkExperience } from '@/components/portfolio/experience'
 import { Footer } from '@/components/portfolio/footer'
 import { Hero } from '@/components/portfolio/hero'
-import { MustSeeRibbon } from '@/components/portfolio/must-see-ribbon'
 import { Projects } from '@/components/portfolio/projects'
 import { getPathname } from '@/i18n/navigation'
 import { Metadata, ResolvingMetadata } from 'next'
@@ -48,13 +49,17 @@ export default async function Home({ params }: PageProps<'/[locale]'>) {
         <Hero />
         <div
           id='content'
-          className='flex w-full max-w-7xl flex-col gap-16 px-8 *:first:mt-16'
+          className='flex w-full max-w-7xl flex-col gap-32 px-8 *:first:mt-16'
         >
           <Section title={t('sections.projects')}>
             <Projects />
           </Section>
-          <Section title={t('sections.experience')} />
-          <Section title={t('sections.education')} />
+          <Section title={t('sections.education')}>
+            <Education />
+          </Section>
+          <Section title={t('sections.experience')}>
+            <WorkExperience />
+          </Section>
           <Section title={t('sections.contact')} />
         </div>
       </main>
@@ -70,8 +75,8 @@ function Section({
 }: ComponentProps<'section'> & { title: string }) {
   return (
     <section {...props}>
-      <div className='mb-8 w-fit'>
-        <h2 className='font-semibol mb-2 w-fit text-4xl'>{title}</h2>
+      <div className='mb-16 w-fit'>
+        <h2 className='mb-2 w-fit text-4xl font-semibold'>{title}</h2>
         <div className='from-brand-primary to-brand-secondary h-1 w-auto rounded-full bg-linear-to-r' />
       </div>
       {children}

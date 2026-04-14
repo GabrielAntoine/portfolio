@@ -5,10 +5,14 @@ import sitytripTn from '@/assets/thumbnails/sitytrip.webp'
 import sleepTn from '@/assets/thumbnails/sleep-app.webp'
 import twoutterTn from '@/assets/thumbnails/twoutter.webp'
 import { StaticImageData } from 'next/image'
-import type { Tag } from './components/portfolio/project-tags'
+import type { Tag } from '@/components/portfolio/projects/project-tags'
+import geolives from '@/assets/logos/geolives.jpg'
+import csh from '@/assets/logos/csh.webp'
+import hepl from '@/assets/logos/hepl.jpg'
 
 // Localized data in /messages :
 // projects : name, description, image.alt
+// education : title, description
 
 type PortfolioData = {
   name: string
@@ -25,6 +29,26 @@ type PortfolioData = {
     websiteUrl?: string
     readme: string
     mustSee?: true
+  }[]
+  education: {
+    id: string
+    start: Date
+    end: Date
+    institution: string
+    logo: StaticImageData
+    location: string
+    locationUrl: string
+    website: string
+  }[]
+  experience: {
+    id: string
+    start: Date
+    end?: Date
+    company: string
+    logo: StaticImageData
+    location: string
+    locationUrl: string
+    website: string
   }[]
 }
 
@@ -115,6 +139,42 @@ export const portfolioData: PortfolioData = {
         'productivity',
         'hybridstockage',
       ],
+    },
+  ],
+  education: [
+    {
+      id: 'bachelor',
+      start: new Date('2022-09-01'),
+      end: new Date('2025-06-30'),
+      institution: 'Haute École de la Province de Liège (HEPL)',
+      logo: hepl,
+      website: 'https://hepl.be/',
+      location: 'Seraing',
+      locationUrl:
+        'https://www.google.com/maps?q=HEPL+-+Haute+Ecole+de+la+Province+de+Li%C3%A8ge+-+Campus+Parc+des+Mar%C3%AAts',
+    },
+    {
+      id: 'high-school',
+      start: new Date('2016-09-01'),
+      end: new Date('2022-06-30'),
+      institution: 'Collège Saint-Hadelin',
+      logo: csh,
+      location: 'Visé',
+      locationUrl:
+        'https://www.google.com/maps?q=Coll%C3%A8ge+Saint-Hadelin+Belgium',
+      website: 'http://www.collegesainthadelin.be/',
+    },
+  ],
+  experience: [
+    {
+      id: 'geolives',
+      start: new Date('2025-02-14'),
+      end: new Date('2025-05-23'),
+      company: 'Geolives Belgium SRL',
+      logo: geolives,
+      location: 'Liège',
+      locationUrl: 'https://www.google.com/maps?q=Geolives+Belgium+SRL',
+      website: 'https://www.geolives.com/',
     },
   ],
 }

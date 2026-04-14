@@ -1,14 +1,14 @@
 import { ComponentProps, ReactNode } from 'react'
-import { Badge } from '../ui/badge'
+import { Badge } from '@/components/ui/badge'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '../ui/card'
+} from '@/components/ui/card'
 import Image from 'next/image'
-import { Button } from '../ui/button'
+import { Button } from '@/components/ui/button'
 import { BookOpen, ExternalLink } from 'lucide-react'
 import { SiGithub } from 'react-icons/si'
 import { getTranslations } from 'next-intl/server'

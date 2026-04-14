@@ -39,7 +39,7 @@
     "must-see": "Must see!"
   },
   "Project": {
-    "repository": "See the repository",
+    "repository": "Source code",
     "visit": "Visit"
   },
   "SocialLinks": {
@@ -105,6 +105,22 @@
         "name": "Sleep application",
         "description": "A mobile application to help users maintain consistent sleep schedules with gamification features, made with Flutter and Firebase",
         "thumbnailAlt": "A preview of the mobile application to improve sleep habits showing the three main screens. From left to right: The screen to set their sleep schedule, the screen to go to sleep and the profile and statistics screen."
+      }
+    },
+    "education": {
+      "bachelor": {
+        "title": "Bachelor's Degree in Computer Science, Specialization in Application Development",
+        "description": "Graduated with highest distinction"
+      },
+      "high-school": {
+        "title": "General Secondary Education Diploma (CESS)",
+        "description": "Graduated with Mathematics Award"
+      }
+    },
+    "work-experience": {
+      "geolives": {
+        "title": "Frontend Web Development Intern",
+        "description": "Design and development of a map-based tourist guide web platform. Primarily frontend development using Next.js and React, with contributions to a Java REST API backend integration. Worked on UI development, navigation experience, and geospatial data integration."
       }
     }
   }

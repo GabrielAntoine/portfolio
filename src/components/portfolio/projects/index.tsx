@@ -1,7 +1,7 @@
 import { portfolioData } from '@/portfolio-data'
 import { Project } from './project'
 import { getTranslations } from 'next-intl/server'
-import { tags } from './project-tags'
+import { Tag, tags } from './project-tags'
 import { MustSeeRibbon } from './must-see-ribbon'
 
 export async function Projects() {
@@ -16,7 +16,7 @@ export async function Projects() {
             {project.mustSee && <MustSeeRibbon />}
 
             <Project
-              tags={project.tags.map((tagId) => {
+              tags={project.tags.map((tagId: Tag) => {
                 const tag = tags[tagId]
 
                 return {

@@ -9,7 +9,7 @@
     "/": {
       "sections": {
         "projects": "Projets",
-        "experience": "Expérience",
+        "experience": "Expérience professionnelle",
         "education": "Études",
         "contact": "Contact"
       }
@@ -39,7 +39,7 @@
     "must-see": "À voir !"
   },
   "Project": {
-    "repository": "Voir le dépôt",
+    "repository": "Code source",
     "visit": "Visiter"
   },
   "SocialLinks": {
@@ -105,6 +105,22 @@
         "name": "Application pour dormir",
         "description": "Une application mobile pour aider les utilisateurs à mieux respecter leurs horaires de sommeil avec des mécanismes de gamification, réalisée avec Flutter et Firebase",
         "thumbnailAlt": "Un aperçu de l'application mobile pour dormir montrant les trois écrans principaux. De gauche à droite : l'écran pour configurer ses horaires de sommeil, l'écran pour aller dormir et l'écran du profil et des statistiques"
+      }
+    },
+    "education": {
+      "bachelor": {
+        "title": "Bachelier en informatique, orientation développement d'applications",
+        "description": "Diplômé avec la plus grande distinction"
+      },
+      "high-school": {
+        "title": "Diplôme d'études secondaires générales (CESS)",
+        "description": "Diplômé avec prix de mathématiques"
+      }
+    },
+    "work-experience": {
+      "geolives": {
+        "title": "Stagiaire en développement web frontend",
+        "description": "Conception et développement d’une plateforme web de guide touristique cartographique. Développement principalement frontend avec Next.js et React, participation à l’intégration d’une API REST en Java pour les fonctionnalités backend. Travail sur l’interface utilisateur, l’expérience de navigation et l’intégration de données géographiques."
       }
     }
   }

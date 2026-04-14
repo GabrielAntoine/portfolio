@@ -7,6 +7,9 @@ import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { TooltipProvider } from '@/components/ui/tooltip'
+import type { Graph } from 'schema-dts'
+import { portfolioData } from '@/portfolio-data'
+import { env } from '../env'
 
 const inter = Inter({
   variable: '--font-sans',
@@ -41,10 +44,37 @@ export async function generateMetadata(
       description,
       // TODO: Add preview image (see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image#image-files-jpg-png-gif)
     },
-    // TODO: Add sitemap.xml
-    // TODO: Add robots.txt;
   }
 }
+
+const schemaJsonLd: Graph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': new URL('#person', env.BASE_URL).href,
+      name: portfolioData.name,
+      alternateName: portfolioData.githubUsername,
+      description:
+        'Full Stack developer specialized in React, Next.js and SQL databases',
+      url: env.BASE_URL.origin,
+      sameAs: [portfolioData.githubUrl, portfolioData.linkedinUrl],
+      jobTitle: 'Full Stack Developer',
+      knowsAbout: ['Next.js', 'React', 'TypeScript', 'PostgreSQL'],
+      image: new URL('me.webp', env.BASE_URL).href,
+    },
+
+    {
+      '@type': 'WebSite',
+      '@id': new URL('#website', env.BASE_URL).href,
+      url: env.BASE_URL.origin,
+      name: `${portfolioData.name} Portfolio`,
+      publisher: {
+        '@id': new URL('#person', env.BASE_URL).href,
+      },
+    },
+  ],
+} as const
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
@@ -68,6 +98,14 @@ export default async function LocaleLayout({
       suppressHydrationWarning
       className={`selection:bg-brand-primary/60 h-full overflow-x-hidden scroll-smooth antialiased ${inter.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaJsonLd),
+          }}
+        />
+      </head>
       <body className='h-full overflow-x-hidden scroll-smooth'>
         <ThemeProvider
           attribute='class'
