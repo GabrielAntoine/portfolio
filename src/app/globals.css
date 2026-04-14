@@ -68,7 +68,7 @@
 }
 
 :root {
-  --wallpaper-grid: oklch(92.758% 0.00592 264.656);
+  --wallpaper-grid: rgb(229, 231, 235);
   --wallpaper-grid-sx: 40px;
   --wallpaper-grid-sy: 40px;
   --background: oklch(1 0 0);

@@ -120,7 +120,7 @@
     "work-experience": {
       "geolives": {
         "title": "Frontend Web Development Intern",
-        "description": "Design and development of a map-based tourist guide web platform. Primarily frontend development using Next.js and React, with contributions to a Java REST API backend integration. Worked on UI development, navigation experience, and geospatial data integration."
+        "description": "Frontend-focused internship on SityTrip, a modern web-based tourist guide, involving the design and development of a cartographic interface with interactive MapLibre maps and dynamic point-of-interest streaming via a REST API, built with React, Next.js, TypeScript, and Joy UI. The work primarily focused on frontend architecture, global state management, multilingual support across six languages, AI-driven data integration, third-party API integration (Tiqets), and performance and SEO optimization through SSR and SSG strategies in Next.js, with limited contribution to backend Java development using Hibernate."
       }
     }
   }

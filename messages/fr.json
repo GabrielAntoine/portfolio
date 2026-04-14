@@ -25,7 +25,7 @@
     "logo-label": "Visiter la page secrète du logo",
     "scroll-down-button-label": "Défiler vers le contenu du site",
     "typewriter": {
-      "length": "6",
+      "length": "7",
       "1": "Développeur Full Stack",
       "2": "Passionné du bas niveau",
       "3": "Alimenté par la curiosité",
@@ -120,7 +120,7 @@
     "work-experience": {
       "geolives": {
         "title": "Stagiaire en développement web frontend",
-        "description": "Conception et développement d’une plateforme web de guide touristique cartographique. Développement principalement frontend avec Next.js et React, participation à l’intégration d’une API REST en Java pour les fonctionnalités backend. Travail sur l’interface utilisateur, l’expérience de navigation et l’intégration de données géographiques."
+        "description": "Stage orienté frontend sur SityTrip, un guide touristique web moderne, incluant la conception et le développement d’une interface cartographique avec cartes interactives MapLibre et flux dynamiques de points d’intérêt via une API REST, réalisé avec React, Next.js, TypeScript et Joy UI. Le travail s’est principalement concentré sur le frontend, notamment la gestion de l’état global, le support multilingue (six langues), l’intégration de données enrichies par l’IA, l’intégration d’APIs tierces (Tiqets) ainsi que l’optimisation des performances et du SEO via SSR et SSG avec Next.js, avec une contribution limitée au développement backend en Java avec Hibernate."
       }
     }
   }

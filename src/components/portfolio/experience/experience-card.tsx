@@ -52,7 +52,7 @@ export async function ExperienceCard({
             <Image
               src={logo}
               alt={`${company} logo`}
-              className='h-[4em] w-auto object-contain object-bottom'
+              className='h-full max-h-[4em] w-auto rounded-sm'
             />
           </Link>
         </div>
