@@ -60,7 +60,7 @@ export const portfolioData: PortfolioData = {
   linkedinUrl: 'https://www.linkedin.com/in/gabriel-antoine-771a10371/',
   githubUsername: 'GabrielAntoine',
   githubUrl: 'https://github.com/GabrielAntoine',
-  email: 'pro.gabriel.antoine@gmail.com',
+  email: 'gabriel@gabrielantoine.dev',
   jobTitle: 'Full Stack Developer',
   birthDate: new Date('2004-05-23'),
   projects: [

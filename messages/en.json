@@ -5,15 +5,21 @@
       "title": "Portfolio"
     }
   },
-  "Pages": {
-    "/": {
-      "sections": {
-        "projects": "Projects",
-        "experience": "Work experience",
-        "education": "Education",
-        "contact": "Contact"
-      }
-    }
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Idea? Questions? Challenges? Let's work together!",
+    "description": "You can reach out to me either by email at <email></email> or by filling out the form below."
+  },
+  "ContactForm": {
+    "name-field-label": "Name",
+    "email-field-label": "Email address",
+    "email-field-placeholder": "your@email.com",
+    "subject-field-label": "Subject",
+    "message-field-label": "Your message",
+    "submit-button": "Send"
+  },
+  "Education": {
+    "title": "Education"
   },
   "Footer": {
     "languages": "Languages"
@@ -42,6 +48,9 @@
     "repository": "Source code",
     "visit": "Visit"
   },
+  "Projects": {
+    "title": "Projects"
+  },
   "SocialLinks": {
     "github-label": "See my GitHub profile",
     "github-hint": "See my projects!",
@@ -55,6 +64,9 @@
   "ToggleThemeButton": {
     "to-dark-label": "Switch to dark mode",
     "to-light-label": "Switch to light mode"
+  },
+  "WorkExperience": {
+    "title": "Work experience"
   },
   "data": {
     "projects": {
