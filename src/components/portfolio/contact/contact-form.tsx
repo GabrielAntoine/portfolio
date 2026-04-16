@@ -1,65 +1,40 @@
-import { Button } from '@/components/ui/button'
-import { Field, FieldGroup, FieldLabel } from '@/components/ui/field'
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-  InputGroupTextarea,
-} from '@/components/ui/input-group'
-import { Mail, Send, Tag, User } from 'lucide-react'
-import { useTranslations } from 'next-intl'
-import { ComponentProps } from 'react'
+'use client'
 
-export function ContactForm(props: ComponentProps<'form'>) {
+import { useState } from 'react'
+import { ContactActualForm } from './contact-actual-form'
+import { Button } from '@/components/ui/button'
+import { toast } from 'sonner'
+import { useTranslations } from 'next-intl'
+import { Check } from 'lucide-react'
+
+export function ContactForm() {
+  const [formStatus, setFormStatus] = useState<'idle' | 'success'>('idle')
   const t = useTranslations('ContactForm')
 
-  return (
-    <form {...props}>
-      <FieldGroup>
-        <FieldGroup className='sm:flex-row sm:gap-2'>
-          <Field>
-            <FieldLabel>{t('name-field-label')}</FieldLabel>
-            <InputGroup withBackground>
-              <InputGroupInput autoComplete='name' placeholder='John Doe' />
-              <InputGroupAddon align={'inline-start'}>
-                <User />
-              </InputGroupAddon>
-            </InputGroup>
-          </Field>
-          <Field>
-            <FieldLabel>{t('email-field-label')}</FieldLabel>
-            <InputGroup withBackground>
-              <InputGroupInput
-                autoComplete='email'
-                type='email'
-                placeholder={t('email-field-placeholder')}
-              />
-              <InputGroupAddon align={'inline-start'}>
-                <Mail />
-              </InputGroupAddon>
-            </InputGroup>
-          </Field>
-          <Field>
-            <FieldLabel>{t('subject-field-label')}</FieldLabel>
-            <InputGroup withBackground>
-              <InputGroupInput />
-              <InputGroupAddon align={'inline-start'}>
-                <Tag />
-              </InputGroupAddon>
-            </InputGroup>
-          </Field>
-        </FieldGroup>
-        <Field>
-          <FieldLabel>{t('message-field-label')}</FieldLabel>
-          <InputGroup withBackground>
-            <InputGroupTextarea className='min-h-48' />
-          </InputGroup>
-        </Field>
-        <Button className='sm:ml-auto sm:w-fit sm:px-32'>
-          <Send />
-          {t('submit-button')}
+  if (formStatus === 'success') {
+    return (
+      <div className='border-success text-success flex w-full flex-col items-center justify-center gap-4 rounded-4xl border-4 p-4 py-16'>
+        <div className='flex gap-1'>
+          <Check />
+          {t('success')}
+        </div>
+        <Button size={'lg'} onClick={() => setFormStatus('idle')}>
+          {t('resend')}
         </Button>
-      </FieldGroup>
-    </form>
+      </div>
+    )
+  }
+
+  return (
+    <ContactActualForm
+      onSuccess={() => setFormStatus('success')}
+      onFail={(error: Error) => {
+        toast.error(t('error'), {
+          position: 'top-center',
+          richColors: true,
+        })
+        console.error(error)
+      }}
+    />
   )
 }

@@ -11,12 +11,42 @@
     "description": "Vous pouvez me contacter soit par mail à <email></email>, soit en remplissant le formulaire ci-dessous."
   },
   "ContactForm": {
-    "name-field-label": "Nom",
-    "email-field-label": "Adresse email",
-    "email-field-placeholder": "votre@email.com",
-    "subject-field-label": "Objet",
-    "message-field-label": "Votre message",
-    "submit-button": "Envoyer"
+    "fields": {
+      "name": {
+        "label": "Nom",
+        "errors": {
+          "min": "Le nom doit contenir au moins {min} caractères",
+          "max": "Le nom est trop long"
+        }
+      },
+      "email": {
+        "label": "Adresse email",
+        "placeholder": "votre@email.com",
+        "errors": {
+          "email": "Veuillez entrer une adresse email valide",
+          "max": "L'adresse email est trop longue"
+        }
+      },
+      "subject": {
+        "label": "Objet",
+        "errors": {
+          "min": "L'objet doit contenir au moins {min} caractères",
+          "max": "L'objet est trop long"
+        }
+      },
+      "message": {
+        "label": "Votre message",
+        "errors": {
+          "min": "Le message doit contenir au moins {min} caractères",
+          "max": "Le message est trop long"
+        }
+      }
+    },
+    "submit-button": "Envoyer",
+    "submitting": "Envoi en cours",
+    "resend": "Envoyer un autre message",
+    "error": "Votre message n'a pas pu être envoyé. Veuillez réessayer plus tard.",
+    "success": "Merci ! Votre message a bien été envoyé. Une copie vous sera envoyée par email."
   },
   "Education": {
     "title": "Études"

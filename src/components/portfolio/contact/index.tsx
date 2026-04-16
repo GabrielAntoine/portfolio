@@ -20,7 +20,9 @@ export async function Contact() {
           ),
         })}
       </p>
-      <ContactForm className='mt-4' />
+      <div className='pt-4'>
+        <ContactForm />
+      </div>
     </Section>
   )
 }

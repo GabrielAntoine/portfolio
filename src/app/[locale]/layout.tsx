@@ -10,6 +10,7 @@ import { TooltipProvider } from '@/components/ui/tooltip'
 import type { Graph } from 'schema-dts'
 import { portfolioData } from '@/portfolio-data'
 import { env } from '../env'
+import { Toaster } from 'sonner'
 
 const inter = Inter({
   variable: '--font-sans',
@@ -107,6 +108,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body className='h-full overflow-x-hidden scroll-smooth'>
+        <Toaster />
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
