@@ -20,6 +20,7 @@ type PortfolioData = {
   githubUsername: string
   githubUrl: string
   email: string
+  sendingEmail: string
   jobTitle: string
   birthDate: Date
   projects: {
@@ -61,6 +62,7 @@ export const portfolioData: PortfolioData = {
   githubUsername: 'GabrielAntoine',
   githubUrl: 'https://github.com/GabrielAntoine',
   email: 'gabriel@gabrielantoine.dev',
+  sendingEmail: 'hello@mail.gabrielantoine.dev',
   jobTitle: 'Full Stack Developer',
   birthDate: new Date('2004-05-23'),
   projects: [

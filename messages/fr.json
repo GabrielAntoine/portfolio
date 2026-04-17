@@ -165,5 +165,16 @@
         "description": "Stage orienté frontend sur SityTrip, un guide touristique web moderne, incluant la conception et le développement d’une interface cartographique avec cartes interactives MapLibre et flux dynamiques de points d’intérêt via une API REST, réalisé avec React, Next.js, TypeScript et Joy UI. Le travail s’est principalement concentré sur le frontend, notamment la gestion de l’état global, le support multilingue (six langues), l’intégration de données enrichies par l’IA, l’intégration d’APIs tierces (Tiqets) ainsi que l’optimisation des performances et du SEO via SSR et SSG avec Next.js, avec une contribution limitée au développement backend en Java avec Hibernate."
       }
     }
+  },
+  "email": {
+    "ContactConfirmationEmail": {
+      "subject": "Confirmation de votre message \"{subject}\"",
+      "content": {
+        "hello": "Bonjour {name},",
+        "thank-you": "Merci pour votre message via {site}. Je vous répondrai dès que possible.",
+        "copy": "Voici une copie de ce que vous avez envoyé :",
+        "automatic": "Ce mail a été envoyé automatiquement."
+      }
+    }
   }
 }

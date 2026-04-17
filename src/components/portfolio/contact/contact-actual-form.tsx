@@ -15,6 +15,7 @@ import z from 'zod'
 import { BasicFormField } from '@/components/form/basic-field'
 import { contactFormConstraints as constraints } from '@/constants'
 import { Spinner } from '@/components/ui/spinner'
+import { sendContactEmail } from '@/actions/send-contact-email'
 
 const makeFormSchema = (t: ReturnType<typeof useTranslations>) => {
   const length = <N extends keyof typeof constraints>(
@@ -54,12 +55,7 @@ const makeFormSchema = (t: ReturnType<typeof useTranslations>) => {
 }
 
 type Props = {
-  onSuccess: (values: {
-    name: string
-    email: string
-    subject: string
-    message: string
-  }) => void
+  onSuccess: () => void
   onFail: (error: Error) => void
 }
 
@@ -81,8 +77,12 @@ export function ContactActualForm({ onFail, onSuccess }: Props) {
     },
     onSubmit: async ({ value }) => {
       // TODO: backend logic to send email
-      onSuccess(value)
-      onFail(new Error())
+      try {
+        await sendContactEmail(value)
+        onSuccess()
+      } catch (e) {
+        onFail(e as Error)
+      }
     },
   })
 
