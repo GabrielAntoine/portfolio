@@ -81,6 +81,29 @@
   "Projects": {
     "title": "Projets"
   },
+  "Skills": {
+    "title": "Compétences",
+    "Expertise": {
+      "title": "Savoir-faire"
+    },
+    "Languages": {
+      "title": "Langues",
+      "french": {
+        "label": "Français",
+        "level": "Langue maternelle"
+      },
+      "english": {
+        "label": "Anglais",
+        "level": "Bonne maîtrise (B2)"
+      }
+    },
+    "Technologies": {
+      "title": "Langages & Technologies"
+    },
+    "Workflow": {
+      "title": "Outils & Workflow"
+    }
+  },
   "SocialLinks": {
     "github-label": "Voir mon profil GitHub",
     "github-hint": "Découvrez mes projets !",

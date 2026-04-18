@@ -18,7 +18,7 @@ function Card({
       data-size={size}
       data-variant={variant}
       className={cn(
-        'group/card bg-card text-card-foreground ring-foreground/15 flex flex-col gap-6 overflow-hidden rounded-3xl py-6 text-sm shadow-xs ring-1 has-[>img:first-child]:pt-0 data-[size=sm]:gap-4 data-[size=sm]:py-4 data-[variant=brand]:bg-transparent *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl',
+        'group/card bg-card text-card-foreground ring-foreground/15 flex flex-col gap-6 overflow-hidden rounded-3xl py-6 text-sm shadow-xs ring-1 has-[>img:first-child]:pt-0 data-[size=sm]:gap-4 data-[size=sm]:py-4 data-[variant=brand]:bg-transparent data-[variant=brand]:ring-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl',
         className,
       )}
       {...props}

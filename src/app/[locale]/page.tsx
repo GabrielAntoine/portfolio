@@ -4,6 +4,7 @@ import { WorkExperience } from '@/components/portfolio/experience'
 import { Footer } from '@/components/portfolio/footer'
 import { Hero } from '@/components/portfolio/hero'
 import { Projects } from '@/components/portfolio/projects'
+import { Skills } from '@/components/portfolio/skills'
 import { getPathname } from '@/i18n/navigation'
 import { Metadata, ResolvingMetadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
@@ -51,6 +52,7 @@ export default async function Home({ params }: PageProps<'/[locale]'>) {
           className='flex w-full max-w-7xl flex-col gap-32 px-8 py-32'
         >
           <Projects />
+          <Skills />
           <Education />
           <WorkExperience />
           <Contact />
