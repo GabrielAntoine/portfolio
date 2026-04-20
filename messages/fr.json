@@ -5,6 +5,14 @@
       "title": "Portfolio"
     }
   },
+  "NotFound": {
+    "not-found": "Page introuvable",
+    "home-button": "Accueil"
+  },
+  "Error": {
+    "title": "Désolé",
+    "subtitle": "Oups ! Une erreur est survenue !"
+  },
   "Contact": {
     "title": "Contact",
     "subtitle": "Une idée ? Des questions ? Des défis ? Travaillons ensemble !",
@@ -75,7 +83,7 @@
     "must-see": "À voir !"
   },
   "Project": {
-    "repository": "Code source",
+    "repository": "Voir le dépôt",
     "visit": "Visiter"
   },
   "Projects": {

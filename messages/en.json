@@ -5,6 +5,14 @@
       "title": "Portfolio"
     }
   },
+  "NotFound": {
+    "not-found": "Not Found",
+    "home-button": "Home"
+  },
+  "Error": {
+    "title": "I'm sorry",
+    "subtitle": "Oops! Something went wrong!"
+  },
   "Contact": {
     "title": "Contact",
     "subtitle": "Idea? Questions? Challenges? Let's work together!",
@@ -75,7 +83,7 @@
     "must-see": "Must see!"
   },
   "Project": {
-    "repository": "Source code",
+    "repository": "See the repository",
     "visit": "Visit"
   },
   "Projects": {
