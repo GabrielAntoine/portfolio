@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/card'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { BookOpen, ExternalLink } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 import { SiGithub } from 'react-icons/si'
 import { getTranslations } from 'next-intl/server'
 import { cn } from '@/lib/utils'
@@ -82,27 +82,20 @@ export async function Project({
           {description}
         </CardDescription>
       </CardHeader>
-      <CardContent className='mt-auto flex flex-wrap justify-stretch gap-1 *:flex-1 *:px-8'>
-        <Button>
-          <BookOpen />
-          <span>
-            README<span className='text-muted-foreground'>.md</span>
-          </span>
-        </Button>
-
-        {repository && (
-          <Button asChild>
-            <Link href={repository} target='_blank' rel='noopener noreferrer'>
-              <SiGithub />
-              {t('repository')}
-            </Link>
-          </Button>
-        )}
+      <CardContent className='mt-auto flex flex-col flex-wrap items-stretch justify-stretch gap-1'>
         {website && (
           <Button asChild>
             <Link href={website} target='_blank' rel='noopener noreferrer'>
               <ExternalLink />
               {t('visit')}
+            </Link>
+          </Button>
+        )}
+        {repository && (
+          <Button asChild>
+            <Link href={repository} target='_blank' rel='noopener noreferrer'>
+              <SiGithub />
+              {t('repository')}
             </Link>
           </Button>
         )}

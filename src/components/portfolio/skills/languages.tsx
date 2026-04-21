@@ -15,9 +15,9 @@ export async function Languages() {
 
   return (
     <Section title={t('title')} icon={<LanguagesIcon />}>
-      <div className='flex w-full justify-center *:max-w-xl *:flex-1'>
-        <Card variant='brand' className=''>
-          <CardContent className='flex flex-col gap-4'>
+      <div className='flex w-full justify-center *:flex-1'>
+        <Card variant='brand'>
+          <CardContent className='flex flex-wrap justify-center gap-10'>
             {languages.map((lang) => (
               <div key={lang.lang}>
                 <Typography type={'subsubtitle'} as='h4'>

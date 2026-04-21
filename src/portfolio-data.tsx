@@ -5,7 +5,7 @@ import sitytripTn from '@/assets/thumbnails/sitytrip.webp'
 import sleepTn from '@/assets/thumbnails/sleep-app.webp'
 import twoutterTn from '@/assets/thumbnails/twoutter.webp'
 import { StaticImageData } from 'next/image'
-import type { Tag } from '@/components/portfolio/projects/project-tags'
+import type { Tag } from '@/components/portfolio/tags'
 import geolives from '@/assets/logos/geolives.jpg'
 import csh from '@/assets/logos/csh.webp'
 import hepl from '@/assets/logos/hepl.jpg'
@@ -32,6 +32,14 @@ type PortfolioData = {
     readme: string
     mustSee?: true
   }[]
+  technologies: {
+    frontend: Tag[]
+    backend: Tag[]
+    databases: Tag[]
+    workflow: Tag[]
+    languages: Tag[]
+    integrations: Tag[]
+  }
   education: {
     id: string
     start: Date
@@ -145,6 +153,27 @@ export const portfolioData: PortfolioData = {
       ],
     },
   ],
+  technologies: {
+    frontend: ['react', 'tailwindcss', 'shadcn', 'tanstackquery', 'flutter'],
+    backend: ['nextjs', 'drizzle', 'nodejs'],
+    databases: ['postgresql', 'sqlite', 'firebase', 'oracle', 'mysql'],
+    workflow: ['vscode', 'jetbrainsides', 'git', 'github', 'vercel'],
+    languages: [
+      'ts',
+      'cpp',
+      'c',
+      'sql',
+      'java',
+      'dart',
+      'python',
+      'php',
+      'html',
+      'css',
+      'js',
+      'r',
+    ],
+    integrations: ['betterauth', 'resend', 'neon', 'supabasestorage'],
+  },
   education: [
     {
       id: 'bachelor',

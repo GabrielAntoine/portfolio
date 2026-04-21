@@ -8,7 +8,6 @@ import { Skills } from '@/components/portfolio/skills'
 import { getPathname } from '@/i18n/navigation'
 import { Metadata, ResolvingMetadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { ComponentProps } from 'react'
 
 export async function generateMetadata(
   { params }: PageProps<'/[locale]'>,

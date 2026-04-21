@@ -1,7 +1,7 @@
 import { portfolioData } from '@/portfolio-data'
 import { Project } from './project'
 import { getTranslations } from 'next-intl/server'
-import { Tag, tags } from './project-tags'
+import { Tag, tags } from '../tags'
 import { MustSeeRibbon } from './must-see-ribbon'
 import { Section } from '../section'
 import { Folders } from 'lucide-react'
@@ -9,6 +9,7 @@ import { Folders } from 'lucide-react'
 export async function Projects() {
   const t = await getTranslations('Projects')
   const d = await getTranslations('data.projects')
+  const tTag = await getTranslations('data.tags')
 
   return (
     <Section title={t('title')} icon={<Folders />}>
@@ -25,7 +26,7 @@ export async function Projects() {
 
                   return {
                     icon: tag.icon,
-                    label: tag.localized ? d(`tags.${tagId}`) : tag.label,
+                    label: tag.localized ? tTag(tagId) : tag.label,
                   }
                 })}
                 website={project.websiteUrl}

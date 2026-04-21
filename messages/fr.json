@@ -106,10 +106,15 @@
       }
     },
     "Technologies": {
-      "title": "Langages & Technologies"
-    },
-    "Workflow": {
-      "title": "Outils & Workflow"
+      "title": "Langages & Technologies",
+      "sections": {
+        "backend": "Backend",
+        "frontend": "Frontend & Mobile",
+        "databases": "Bases de données",
+        "languages": "Langages",
+        "workflow": "Outils & Workflow",
+        "integrations": "Intégrations"
+      }
     }
   },
   "SocialLinks": {
@@ -130,25 +135,25 @@
     "title": "Expérience professionnelle"
   },
   "data": {
+    "tags": {
+      "library": "Bibliothèque",
+      "game": "Jeu",
+      "mobile": "Mobile",
+      "school": "École",
+      "hobby": "Hobby",
+      "internship": "Stage",
+      "socialnetwork": "Réseau social",
+      "arcade": "Arcade",
+      "tourguide": "Guide touristique",
+      "cartography": "Cartographie",
+      "security": "Sécurité",
+      "productivity": "Productivité",
+      "mathematics": "Mathématiques",
+      "restapi": "API REST",
+      "compiletimepolymorphism": "Polymorphisme à la compilation",
+      "hybridstockage": "Stockage hybride"
+    },
     "projects": {
-      "tags": {
-        "library": "Bibliothèque",
-        "game": "Jeu",
-        "mobile": "Mobile",
-        "school": "École",
-        "hobby": "Hobby",
-        "internship": "Stage",
-        "socialnetwork": "Réseau social",
-        "arcade": "Arcade",
-        "tourguide": "Guide touristique",
-        "cartography": "Cartographie",
-        "security": "Sécurité",
-        "productivity": "Productivité",
-        "mathematics": "Mathématiques",
-        "restapi": "API REST",
-        "compiletimepolymorphism": "Polymorphisme à la compilation",
-        "hybridstockage": "Stockage hybride"
-      },
       "twoutter": {
         "name": "Twoutter",
         "description": "Une application web full stack implémentant les fonctionnalités principales de Twitter avec des technologies modernes et une interface responsive et mobile-first",

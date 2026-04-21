@@ -106,10 +106,15 @@
       }
     },
     "Technologies": {
-      "title": "Technologies & Languages"
-    },
-    "Workflow": {
-      "title": "Tools & Workflow"
+      "title": "Technologies & Languages",
+      "sections": {
+        "backend": "Backend",
+        "frontend": "Frontend & Mobile",
+        "databases": "Databases",
+        "languages": "Languages",
+        "workflow": "Tools & Workflow",
+        "integrations": "Integrations"
+      }
     }
   },
   "SocialLinks": {
@@ -130,25 +135,25 @@
     "title": "Work experience"
   },
   "data": {
+    "tags": {
+      "library": "Library",
+      "game": "Game",
+      "mobile": "Mobile",
+      "school": "School",
+      "hobby": "Hobby",
+      "internship": "Internship",
+      "socialnetwork": "Social network",
+      "arcade": "Arcade",
+      "tourguide": "Tour guide",
+      "cartography": "Cartography",
+      "security": "Security",
+      "productivity": "Productivity",
+      "mathematics": "Mathematics",
+      "restapi": "REST API",
+      "compiletimepolymorphism": "Compile-time polymorphism",
+      "hybridstockage": "Hybrid stockage"
+    },
     "projects": {
-      "tags": {
-        "library": "Library",
-        "game": "Game",
-        "mobile": "Mobile",
-        "school": "School",
-        "hobby": "Hobby",
-        "internship": "Internship",
-        "socialnetwork": "Social network",
-        "arcade": "Arcade",
-        "tourguide": "Tour guide",
-        "cartography": "Cartography",
-        "security": "Security",
-        "productivity": "Productivity",
-        "mathematics": "Mathematics",
-        "restapi": "REST API",
-        "compiletimepolymorphism": "Compile-time polymorphism",
-        "hybridstockage": "Hybrid stockage"
-      },
       "twoutter": {
         "name": "Twoutter",
         "description": "A full stack web application recreating core Twitter features using modern web technologies and a mobile-first responsive UI",
