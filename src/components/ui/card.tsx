@@ -1,38 +1,65 @@
 import * as React from 'react'
 
 import { cn } from '@/lib/utils'
-import { GradientBorder } from '../gradient-border'
+import { cva, VariantProps } from 'class-variance-authority'
+import './card.css'
+
+const cardVariants = cva(
+  'group/card flex flex-col has-[>img:first-child]:pt-0 text-sm *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl',
+  {
+    variants: {
+      variant: {
+        default:
+          'bg-card text-card-foreground ring-foreground/15 rounded-3xl shadow-xs ring-1',
+        brand: cn(
+          ' relative z-0 rounded-4xl border-4 border-transparent hover:-translate-y-2 transition',
+          // Border
+          'after:from-brand-primary after:via-brand-secondary after:to-brand-primary after:paused hover:after:running after:absolute after:animate-[spin-angle_3s_linear_infinite] after:-inset-[4px] after:-z-1 after:rounded-4xl after:bg-conic-[from_var(--angle)_in_oklab] after:mask-exclude! after:p-[4px] after:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]',
+        ),
+      },
+      size: {
+        default: 'gap-6 py-6',
+        sm: 'gap-4 py-4',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+      size: 'default',
+    },
+  },
+)
+
+function CardGlow() {
+  return (
+    <div
+      className={cn(
+        // Blur effect
+        'absolute -inset-2 -z-2 hidden opacity-85 blur-sm transition-all group-hover/card:-inset-4 group-data-[variant=brand]/card:block',
+        // Border
+        'after:from-brand-primary after:to-brand-primary after:via-brand-secondary after:paused group-hover/card:after:running after:absolute after:inset-0 after:animate-[spin-angle_3s_linear_infinite] after:rounded-[calc(--spacing(1)+var(--radius-4xl))] after:bg-conic-[from_var(--angle)_in_oklab] after:mask-exclude! after:p-3 after:transition-all after:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] group-hover/card:after:p-5',
+      )}
+    />
+  )
+}
 
 function Card({
   className,
-  size = 'default',
-  variant = 'default',
+  size,
+  variant,
+  children,
   ...props
-}: React.ComponentProps<'div'> & {
-  size?: 'default' | 'sm'
-  variant?: 'default' | 'brand'
-}) {
-  const card = (
+}: React.ComponentProps<'div'> & VariantProps<typeof cardVariants>) {
+  return (
     <div
       data-slot='card'
       data-size={size}
       data-variant={variant}
-      className={cn(
-        'group/card bg-card text-card-foreground ring-foreground/15 flex flex-col gap-6 overflow-hidden rounded-3xl py-6 text-sm shadow-xs ring-1 has-[>img:first-child]:pt-0 data-[size=sm]:gap-4 data-[size=sm]:py-4 data-[variant=brand]:bg-transparent data-[variant=brand]:ring-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl',
-        className,
-      )}
+      className={cn(cardVariants({ size, variant, className }))}
       {...props}
-    />
-  )
-
-  if (variant === 'default') {
-    return card
-  }
-
-  return (
-    <GradientBorder className='gb-rounded-4xl gb-width-1 h-full'>
-      {card}
-    </GradientBorder>
+    >
+      <CardGlow />
+      {children}
+    </div>
   )
 }
 

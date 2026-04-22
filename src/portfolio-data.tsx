@@ -13,6 +13,7 @@ import hepl from '@/assets/logos/hepl.jpg'
 // Localized data in /messages :
 // projects : name, description, image.alt
 // education : title, description
+// experience: title, description
 
 type PortfolioData = {
   name: string
@@ -61,8 +62,6 @@ type PortfolioData = {
     website: string
   }[]
 }
-
-// I might need a generatePortfolioData with react cache for the markdowns
 
 export const portfolioData: PortfolioData = {
   name: 'Gabriel Antoine',

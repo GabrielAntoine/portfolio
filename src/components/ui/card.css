@@ -1,0 +1,11 @@
+@property --angle {
+  syntax: '<angle>';
+  initial-value: -90deg;
+  inherits: false;
+}
+
+@keyframes spin-angle {
+  to {
+    --angle: 270deg;
+  }
+}
