@@ -79,6 +79,21 @@
       "7": "!Aime vraiment le CSS"
     }
   },
+  "Languages": {
+    "title": "Langues",
+    "french": {
+      "label": "Français",
+      "level": "Langue maternelle"
+    },
+    "english": {
+      "label": "Anglais",
+      "level": "Bonne maîtrise (B2)"
+    }
+  },
+  "License": {
+    "title": "License",
+    "message": "Ah non, ce n'est pas un README."
+  },
   "MustSeeRibbon": {
     "must-see": "À voir !"
   },
@@ -93,17 +108,6 @@
     "title": "Compétences",
     "Expertise": {
       "title": "Savoir-faire"
-    },
-    "Languages": {
-      "title": "Langues",
-      "french": {
-        "label": "Français",
-        "level": "Langue maternelle"
-      },
-      "english": {
-        "label": "Anglais",
-        "level": "Bonne maîtrise (B2)"
-      }
     },
     "Technologies": {
       "title": "Langages & Technologies",
@@ -199,6 +203,32 @@
       "geolives": {
         "title": "Stagiaire en développement web frontend",
         "description": "Stage orienté frontend sur SityTrip, un guide touristique web moderne, incluant la conception et le développement d’une interface cartographique avec cartes interactives MapLibre et flux dynamiques de points d’intérêt via une API REST, réalisé avec React, Next.js, TypeScript et Joy UI. Le travail s’est principalement concentré sur le frontend, notamment la gestion de l’état global, le support multilingue (six langues), l’intégration de données enrichies par l’IA, l’intégration d’APIs tierces (Tiqets) ainsi que l’optimisation des performances et du SEO via SSR et SSG avec Next.js, avec une contribution limitée au développement backend en Java avec Hibernate."
+      }
+    },
+    "expertise": {
+      "restapi": {
+        "title": "Concevoir des APIs REST et architectures backend",
+        "description": "Conception d'APIs REST structurées, architecture en couches, gestion des données et règles métier, injection et inversion de dépendances, équilibrage de l'abstraction"
+      },
+      "modernui": {
+        "title": "Concevoir des interfaces modernes",
+        "description": "Interfaces responsive et mobile-first, architecture par composants, intégration de design systems, UX fluide, accessibilité, SEO technique, rendu optimisé avec SSR/SSG/ISR"
+      },
+      "databases": {
+        "title": "Modéliser et interagir avec des bases de données",
+        "description": "Modélisation relationnelle, structuration, persistance et manipulation des données applicatives, requêtes SQL avancées et optimisées, dénormalisation, utilisation d'ORM"
+      },
+      "security": {
+        "title": "Gérer l'authentification et la sécurité",
+        "description": "Authentification via JWT, OAuth ou providers externes, gestion des utilisateurs connectés, protection des données sensibles (hashing, variables d'environnement)"
+      },
+      "integrations": {
+        "title": "Intégrer des services et APIs externes",
+        "description": "Intégration d'APIs tierces via communication HTTP, envoi d'emails et de notifications, intégration de services cloud, orchestration de services externes dans une logique applicative"
+      },
+      "deploy": {
+        "title": "Déployer et maintenir une application web",
+        "description": "Déploiement sur plateformes cloud, gestion des environnements, configuration de domaines et DNS, mise en production et itérations continues, intérêt pour les pratiques DevOps"
       }
     }
   },

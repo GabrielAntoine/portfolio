@@ -79,6 +79,21 @@
       "7": "!Actually enjoys CSS"
     }
   },
+  "Languages": {
+    "title": "Languages",
+    "french": {
+      "label": "French",
+      "level": "Native"
+    },
+    "english": {
+      "label": "English",
+      "level": "Intermediate-Advanced (B2)"
+    }
+  },
+  "License": {
+    "title": "License",
+    "message": "Oh no, this isn't a README."
+  },
   "MustSeeRibbon": {
     "must-see": "Must see!"
   },
@@ -93,17 +108,6 @@
     "title": "Skills",
     "Expertise": {
       "title": "Expertise"
-    },
-    "Languages": {
-      "title": "Languages",
-      "french": {
-        "label": "French",
-        "level": "Native"
-      },
-      "english": {
-        "label": "English",
-        "level": "Intermediate-Advanced (B2)"
-      }
     },
     "Technologies": {
       "title": "Technologies & Languages",
@@ -199,6 +203,32 @@
       "geolives": {
         "title": "Frontend Web Development Intern",
         "description": "Frontend-focused internship on SityTrip, a modern web-based tourist guide, involving the design and development of a cartographic interface with interactive MapLibre maps and dynamic point-of-interest streaming via a REST API, built with React, Next.js, TypeScript, and Joy UI. The work primarily focused on frontend architecture, global state management, multilingual support across six languages, AI-driven data integration, third-party API integration (Tiqets), and performance and SEO optimization through SSR and SSG strategies in Next.js, with limited contribution to backend Java development using Hibernate."
+      }
+    },
+    "expertise": {
+      "restapi": {
+        "title": "Designing REST APIs and backend architectures",
+        "description": "Design of structured REST APIs, layered architecture, business logic and data management, dependency injection and inversion, abstraction trade-offs"
+      },
+      "modernui": {
+        "title": "Building modern user interfaces",
+        "description": "Responsive and mobile-first interfaces, component-based architecture, design system integration, smooth UX, accessibility, technical SEO, optimized rendering with SSR/SSG/ISR"
+      },
+      "databases": {
+        "title": "Modeling and working with databases",
+        "description": "Relational data modeling, structuring, persistence and manipulation of application data, advanced and optimized SQL queries, denormalisation, use of ORMs"
+      },
+      "security": {
+        "title": "Managing authentication and security",
+        "description": "Authentication using JWT, OAuth or external providers, user session handling, protection of sensitive data (hashing, environment variables)"
+      },
+      "integrations": {
+        "title": "Integrating external services and APIs",
+        "description": "Integration of third-party APIs via HTTP communication, email and notification systems, cloud services integration, orchestration of external services within application logic"
+      },
+      "deploy": {
+        "title": "Deploying and maintaining web applications",
+        "description": "Deployment on cloud platforms, environment management, domain and DNS configuration, production releases and continuous iteration, interest in DevOps practices"
       }
     }
   },

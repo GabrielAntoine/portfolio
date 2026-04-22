@@ -3,6 +3,8 @@ import { Education } from '@/components/portfolio/education'
 import { WorkExperience } from '@/components/portfolio/experience'
 import { Footer } from '@/components/portfolio/footer'
 import { Hero } from '@/components/portfolio/hero'
+import { Languages } from '@/components/portfolio/languages'
+import { License } from '@/components/portfolio/license'
 import { Projects } from '@/components/portfolio/projects'
 import { Skills } from '@/components/portfolio/skills'
 import { getPathname } from '@/i18n/navigation'
@@ -50,11 +52,13 @@ export default async function Home({ params }: PageProps<'/[locale]'>) {
           id='content'
           className='flex w-full max-w-7xl flex-col gap-32 px-8 py-32'
         >
-          <Projects />
           <Skills />
+          <Projects />
           <Education />
           <WorkExperience />
+          <Languages />
           <Contact />
+          <License />
         </div>
       </main>
       <Footer />

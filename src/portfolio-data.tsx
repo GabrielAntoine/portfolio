@@ -14,6 +14,7 @@ import hepl from '@/assets/logos/hepl.jpg'
 // projects : name, description, image.alt
 // education : title, description
 // experience: title, description
+// expertise : title, description
 
 type PortfolioData = {
   name: string
@@ -33,6 +34,7 @@ type PortfolioData = {
     readme: string
     mustSee?: true
   }[]
+  expertise: Tag[]
   technologies: {
     frontend: Tag[]
     backend: Tag[]
@@ -151,6 +153,14 @@ export const portfolioData: PortfolioData = {
         'hybridstockage',
       ],
     },
+  ],
+  expertise: [
+    'restapi',
+    'databases',
+    'security',
+    'modernui',
+    'integrations',
+    'deploy',
   ],
   technologies: {
     frontend: ['react', 'tailwindcss', 'shadcn', 'tanstackquery', 'flutter'],

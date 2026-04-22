@@ -11,7 +11,7 @@ const languages = [
 ]
 
 export async function Languages() {
-  const t = await getTranslations('Skills.Languages')
+  const t = await getTranslations('Languages')
 
   return (
     <Section title={t('title')} icon={<LanguagesIcon />}>
@@ -20,7 +20,7 @@ export async function Languages() {
           <CardContent className='flex flex-wrap justify-center gap-10'>
             {languages.map((lang) => (
               <div key={lang.lang}>
-                <Typography type={'subsubtitle'} as='h4'>
+                <Typography type={'subsubtitle'} as='h3'>
                   {lang.icon}
                   {t(`${lang.lang}.label`)}
                 </Typography>

@@ -3,7 +3,7 @@ import { cva, VariantProps } from 'class-variance-authority'
 import { ComponentProps, ElementType } from 'react'
 
 const variants = cva(
-  '[&_svg]:size-[1em] has-[svg]:flex has-[svg]:items-start has-[svg]:gap-x-2',
+  '[&_svg]:size-[1em] [&_svg]:shrink-0 has-[svg]:flex has-[svg]:items-start has-[svg]:gap-x-2',
   {
     variants: {
       type: {
@@ -19,8 +19,6 @@ const variants = cva(
     },
   },
 )
-
-const className = 'has-[svg]:inline-flex'
 
 type TextTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'
 

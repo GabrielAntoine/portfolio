@@ -21,6 +21,10 @@ import {
   Radical,
   Boxes,
   Braces,
+  MonitorSmartphone,
+  Database,
+  PlugZap,
+  Rocket,
 } from 'lucide-react'
 import {
   SiBetterauth,
@@ -409,6 +413,22 @@ const _tags = {
   hybridstockage: {
     localized: true,
     icon: <CloudSync />,
+  },
+  modernui: {
+    localized: true,
+    icon: <MonitorSmartphone />,
+  },
+  databases: {
+    localized: true,
+    icon: <Database />,
+  },
+  integrations: {
+    localized: true,
+    icon: <PlugZap />,
+  },
+  deploy: {
+    localized: true,
+    icon: <Rocket />,
   },
 } as const satisfies Record<string, TagValue>
 

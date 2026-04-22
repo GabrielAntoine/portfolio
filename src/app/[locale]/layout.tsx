@@ -97,6 +97,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       suppressHydrationWarning
+      data-scroll-behavior='smooth'
       className={`selection:bg-brand-primary/60 h-full overflow-x-hidden scroll-smooth antialiased ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <head>
