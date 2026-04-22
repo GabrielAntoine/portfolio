@@ -45,7 +45,7 @@ export async function sendContactEmail(data: z.infer<typeof messageSchema>) {
   const t = await getTranslations('email.ContactConfirmationEmail')
 
   // Send confirmation only if the first mail was successfully sent
-  resend.emails.send({
+  await resend.emails.send({
     from: `${portfolioData.name} <${portfolioData.sendingEmail}>`,
     to: email,
     replyTo: portfolioData.email,
