@@ -1,11 +1,22 @@
+import { cn } from '@/lib/utils'
 import { Star } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
+import { ComponentProps } from 'react'
 
-export async function MustSeeRibbon() {
+export async function MustSeeRibbon({
+  className,
+  ...props
+}: ComponentProps<'div'>) {
   const t = await getTranslations('MustSeeRibbon')
 
   return (
-    <div className='absolute z-1 origin-bottom-right -translate-x-[calc(100%-100%/sqrt(2)+--spacing(4))] -translate-y-[calc(100%+--spacing(4))] rotate-315'>
+    <div
+      className={cn(
+        'absolute top-0 left-0 z-1 origin-bottom-right -translate-x-[calc(100%-100%/sqrt(2)+--spacing(4))] -translate-y-[calc(100%+--spacing(4))] rotate-315',
+        className,
+      )}
+      {...props}
+    >
       <div className='flex h-8 items-center justify-center truncate bg-red-900 px-12 text-white [clip-path:polygon(0_100%,--spacing(8)_0,calc(100%---spacing(8))_0,100%_100%)]'>
         <Star className='mr-2' />
         {t('must-see')}

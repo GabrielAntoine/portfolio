@@ -43,6 +43,7 @@ import {
   SiNodedotjs,
   SiPhp,
   SiPostgresql,
+  SiPostman,
   SiPython,
   SiR,
   SiReact,
@@ -308,6 +309,12 @@ const _tags = {
     label: 'VS Code',
     icon: <VscVscode />,
     url: 'https://code.visualstudio.com/',
+  },
+  postman: {
+    localized: false,
+    label: 'Postman',
+    icon: <SiPostman />,
+    url: 'https://www.postman.com/',
   },
   jetbrainsides: {
     localized: false,

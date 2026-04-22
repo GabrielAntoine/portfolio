@@ -3,9 +3,10 @@ import * as React from 'react'
 import { cn } from '@/lib/utils'
 import { cva, VariantProps } from 'class-variance-authority'
 import './card.css'
+import { Reveal } from '../reveal'
 
 const cardVariants = cva(
-  'group/card flex flex-col has-[>img:first-child]:pt-0 text-sm *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl',
+  'group/card flex h-full w-full flex-col has-[>img:first-child]:pt-0 text-sm *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl',
   {
     variants: {
       variant: {
@@ -50,16 +51,18 @@ function Card({
   ...props
 }: React.ComponentProps<'div'> & VariantProps<typeof cardVariants>) {
   return (
-    <div
-      data-slot='card'
-      data-size={size}
-      data-variant={variant}
-      className={cn(cardVariants({ size, variant, className }))}
-      {...props}
-    >
-      <CardGlow />
-      {children}
-    </div>
+    <Reveal>
+      <div
+        data-slot='card'
+        data-size={size}
+        data-variant={variant}
+        className={cn(cardVariants({ size, variant, className }))}
+        {...props}
+      >
+        <CardGlow />
+        {children}
+      </div>
+    </Reveal>
   )
 }
 

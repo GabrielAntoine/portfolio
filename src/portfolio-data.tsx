@@ -156,7 +156,7 @@ export const portfolioData: PortfolioData = {
     frontend: ['react', 'tailwindcss', 'shadcn', 'tanstackquery', 'flutter'],
     backend: ['nextjs', 'drizzle', 'nodejs'],
     databases: ['postgresql', 'sqlite', 'firebase', 'oracle', 'mysql'],
-    workflow: ['vscode', 'jetbrainsides', 'git', 'github', 'vercel'],
+    workflow: ['vscode', 'jetbrainsides', 'git', 'github', 'vercel', 'postman'],
     languages: [
       'ts',
       'cpp',

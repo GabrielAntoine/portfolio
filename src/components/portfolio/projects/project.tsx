@@ -14,6 +14,7 @@ import { SiGithub } from 'react-icons/si'
 import { getTranslations } from 'next-intl/server'
 import { cn } from '@/lib/utils'
 import { Link } from '@/i18n/navigation'
+import { MustSeeRibbon } from './must-see-ribbon'
 
 type Props = {
   tags: { label: string; icon: ReactNode }[]
@@ -22,6 +23,7 @@ type Props = {
   thumbnail: ComponentProps<typeof Image>
   repository?: string
   website?: string
+  mustSee?: boolean
 } & ComponentProps<typeof Card>
 
 export async function Project({
@@ -32,6 +34,7 @@ export async function Project({
   description,
   thumbnail: { className: thumbnailCn, ...thumbnail },
   className,
+  mustSee = false,
   ...props
 }: Props) {
   const t = await getTranslations('Project')
@@ -45,6 +48,7 @@ export async function Project({
       className={cn('h-full w-full', className)}
       {...props}
     >
+      {mustSee && <MustSeeRibbon className='-top-1 -left-1' />}
       <CardHeader>
         <div className='relative w-full rounded-xl border'>
           {/* eslint-disable-next-line jsx-a11y/alt-text */}
