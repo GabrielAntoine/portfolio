@@ -14,9 +14,6 @@ export function Reveal(props: ComponentProps<typeof motion.div>) {
         opacity: 1,
         y: 0,
       }}
-      style={{
-        border: '2px solid red',
-      }}
       viewport={{ once: true, amount: 0, margin: '0px 0px -80px 0px' }}
       {...props}
     />
