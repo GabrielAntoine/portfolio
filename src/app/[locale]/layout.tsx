@@ -112,7 +112,7 @@ export default async function LocaleLayout({
         <Toaster />
         <ThemeProvider
           attribute='class'
-          defaultTheme='system'
+          defaultTheme='dark'
           enableSystem
           disableTransitionOnChange
           forcedTheme={undefined}

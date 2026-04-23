@@ -8,13 +8,16 @@ export function Reveal(props: ComponentProps<typeof motion.div>) {
     <motion.div
       initial={{
         opacity: 0,
-        y: '100px',
+        y: 100,
       }}
       whileInView={{
         opacity: 1,
         y: 0,
       }}
-      viewport={{ once: true, amount: 0.2 }}
+      style={{
+        border: '2px solid red',
+      }}
+      viewport={{ once: true, amount: 0, margin: '0px 0px -80px 0px' }}
       {...props}
     />
   )
