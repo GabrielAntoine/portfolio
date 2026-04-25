@@ -48,7 +48,7 @@ export async function Hero() {
             as={'p'}
             container={{
               className:
-                'mb-2 text-[clamp(var(--text-2xl),3vw,var(--text-4xl))] leading-[1em]',
+                'mb-2 text-[clamp(var(--text-xl),3vw,var(--text-4xl))] leading-[1em]',
             }}
           />
           <p className='mt-8 px-4 text-justify sm:text-center'>

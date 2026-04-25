@@ -10,9 +10,9 @@ export function HeroTitle() {
   return (
     <h1
       aria-label={fullname}
-      className='max-w-full text-center text-[clamp(var(--text-5xl),5vw,var(--text-7xl))] leading-[1em] font-bold'
+      className='max-w-full text-center text-[clamp(var(--text-3xl),10vw,var(--text-7xl))] leading-[1em] font-bold'
     >
-      <span aria-hidden className='flex gap-[0.2em]'>
+      <span aria-hidden className='flex flex-wrap justify-center gap-[0.2em]'>
         {names.map((name, i) => (
           <span
             key={i}
