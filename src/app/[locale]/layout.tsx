@@ -38,12 +38,10 @@ export async function generateMetadata(
       ...openGraph,
       locale,
       description,
-      // TODO: Add preview image
     },
     twitter: {
       ...twitter,
       description,
-      // TODO: Add preview image (see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image#image-files-jpg-png-gif)
     },
   }
 }

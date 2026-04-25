@@ -26,11 +26,11 @@ export async function SocialLinks() {
       url: `mailto:${portfolioData.email}`,
       icon: <Mail className='size-9' />,
     },
-    {
-      name: 'cv',
-      url: '/cv.pdf',
-      icon: <FileText className='size-7.5' />,
-    },
+    // { // TODO: Add CV
+    //   name: 'cv',
+    //   url: '/cv.pdf',
+    //   icon: <FileText className='size-7.5' />,
+    // },
   ]
 
   return iconLinks.map((link) => (
