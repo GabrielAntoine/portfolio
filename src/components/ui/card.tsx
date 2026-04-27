@@ -13,7 +13,7 @@ const cardVariants = cva(
         default:
           'bg-card text-card-foreground ring-foreground/15 rounded-3xl shadow-xs ring-1',
         brand: cn(
-          ' relative z-0 rounded-4xl border-4 border-transparent hover:-translate-y-2 transition',
+          'relative z-0 rounded-4xl border-4 border-transparent hover:-translate-y-2 transition',
           // Border
           'after:from-brand-primary after:via-brand-secondary after:to-brand-primary after:paused hover:after:running after:absolute after:animate-[spin-angle_3s_linear_infinite] after:-inset-[4px] after:-z-1 after:rounded-4xl after:bg-conic-[from_var(--angle)_in_oklab] after:mask-exclude! after:p-[4px] after:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]',
         ),
@@ -35,9 +35,9 @@ function CardGlow() {
     <div
       className={cn(
         // Blur effect
-        'absolute -inset-2 -z-2 hidden opacity-85 blur-sm transition-all group-hover/card:-inset-4 group-data-[variant=brand]/card:block',
+        'absolute -inset-1 -z-2 hidden opacity-85 transition-[inset,filter] delay-[0ms,150ms] group-hover/card:-inset-4 group-hover/card:blur-sm group-hover/card:delay-10 group-data-[variant=brand]/card:block',
         // Border
-        'after:from-brand-primary after:to-brand-primary after:via-brand-secondary after:paused group-hover/card:after:running after:absolute after:inset-0 after:animate-[spin-angle_3s_linear_infinite] after:rounded-[calc(--spacing(1)+var(--radius-4xl))] after:bg-conic-[from_var(--angle)_in_oklab] after:mask-exclude! after:p-3 after:transition-all after:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] group-hover/card:after:p-5',
+        'after:from-brand-primary after:to-brand-primary after:via-brand-secondary after:paused group-hover/card:after:running /after:p-3 after:absolute after:inset-0 after:animate-[spin-angle_3s_linear_infinite] after:rounded-4xl after:bg-conic-[from_var(--angle)_in_oklab] after:mask-exclude! after:transition-[padding,border-radius] after:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] group-hover/card:after:rounded-[calc(--spacing(1)+var(--radius-4xl))] group-hover/card:after:p-5',
       )}
     />
   )
