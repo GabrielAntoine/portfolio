@@ -11,6 +11,7 @@ import type { Graph } from 'schema-dts'
 import { portfolioData } from '@/portfolio-data'
 import { env } from '../env'
 import { Toaster } from 'sonner'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({
   variable: '--font-sans',
@@ -107,6 +108,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body className='h-full overflow-x-hidden scroll-smooth'>
+        <Analytics />
         <Toaster />
         <ThemeProvider
           attribute='class'
